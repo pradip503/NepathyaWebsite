@@ -1,0 +1,52 @@
+
+
+.card-wrapper {
+    perspective: 1000px;
+}
+
+.frontface {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    
+}
+
+.backface {
+  background-color: paleturquoise;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transform: rotateY(180deg);
+}
+
+#card-2{
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 85%;
+    height: 40%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+
+#card-2:hover {
+    transform: rotateY(180deg);
+}
+
+.frontface-back-image {
+    background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.backface-background-color {
+    background-color: purple;
+}
+

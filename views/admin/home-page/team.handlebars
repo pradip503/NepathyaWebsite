@@ -1,0 +1,53 @@
+<h2>All Members.</h2>
+
+
+
+{{#if failure_message }}
+<div class="alert alert-danger">
+    {{failure_message}}
+</div>
+{{/if}}
+
+{{#if success_message }}
+<div class="alert alert-success">
+    {{success_message}}
+</div>
+{{/if}}
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Image</th>
+            <th colspan="2">Operations</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+
+        {{#each teamMembers}}
+
+        <tr>
+            <td>{{id}}</td>
+            
+            <td>{{name}}</td>
+            <td>{{position}}</td>
+            <td>
+                <img height="50" src="/uploads/{{file}}" alt="" class="img img-responsive">
+            </td>
+            <td><a href="/admin/team-members/edit/{{id}}" class="btn btn-info">Edit</a></td>
+            <td>
+                <form action="/admin/team-members/{{id}}?_method=DELETE" method="post">
+                    <button type="submit" class="btn btn-danger" >DELETE</button>
+                </form>
+            </td>
+        </tr>
+        
+        {{/each}}
+    </tbody>
+
+</table>

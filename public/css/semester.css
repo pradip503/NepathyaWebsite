@@ -1,0 +1,11 @@
+.semester-list a:hover {
+    background-color:  #4285F4;
+    color: white;
+}
+
+.semester-list-group{
+    max-height: 244px;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+

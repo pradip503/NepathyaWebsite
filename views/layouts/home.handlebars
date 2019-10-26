@@ -1,0 +1,171 @@
+<html>
+    <head>
+
+        
+        <title>Home</title>
+
+          <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+            <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />            
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+            <link href="/css/material-dashboard.css" rel="stylesheet" />
+
+
+            <link rel="icon" href="/images/nepathya_logo.png">
+            <link rel="stylesheet" href="/css/mdb.min.css">
+            <link rel="stylesheet" href="/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/sidebar.css">
+            <link rel="stylesheet" href="/css/flliping-cards.css">
+            <link rel="stylesheet" href="/css/mystyle.css">
+            
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+
+            
+
+
+
+    </head>
+
+
+    <body>
+        <div class="wrapper" style="height: 0vh" id="mywrapper" >
+             {{> home/sidebar}}    
+        </div>
+        
+
+{{!-- main content --}}
+
+
+<div class="main-panel main-content-panel-overwrite">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  primary-color navbar_overwrite sticky-top text-white">
+
+        <div class="container-fluid">
+            
+        <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="/admin">Dashboard</a>
+            {{!-- <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Library</a></li>
+                <li class="breadcrumb-item active">Data</li>
+                </ol>
+            </nav> --}}
+        </div>
+
+  
+
+
+        <button class="navbar-toggler " id="my-collapse-button"  type="button" data-toggle="collapse"  aria-controls="navigation-index" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="sr-only ">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar "></span>
+            <span class="navbar-toggler-icon icon-bar "></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+
+            <li class="nav-item" id="nav-item-overwrite">
+                <a class="nav-link" href="/login">
+                <i class="material-icons material-icon-overwrite" style="color: white">person</i>
+                Login/Register
+                </a>
+            </li>
+
+            {{!-- <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                <i class="material-icons">notifications</i> Notifications
+                </a>
+            </li> --}}
+            <!-- your navbar here -->
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <div class="content" style="padding-top: 0px;">
+        <div class="container-fluid">
+        <!-- your content here -->
+        
+        {{{ body }}}
+
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-fluid">
+        <nav class="float-left">
+            <ul>
+            <li>
+                <a href="">
+                    NCSS
+                </a>
+            </li>
+            </ul>
+        </nav>
+        <div class="copyright float-right">
+            &copy;
+            <script>
+            document.write(new Date().getFullYear())
+            </script>, made by
+            <a href="#" target="">Nepathya Council Team</a>
+        </div>
+        <!-- your footer here -->
+        </div>
+    </footer>
+</div>
+
+
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+    {{!-- For proper working of carousel anyone of carousel item must have class active --}}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.carousel-item:first-child').addClass('active');
+    });
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="/js/perfect-scrollbar.jquery.min.js"></script>
+
+    <script type="text/javascript" src="/js/material-dashboard.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/js/mdb.min.js"></script>
+
+     <!-- loads  handlebars -->
+    <script type="text/javascript" src="/js/handlebars-view/handlebars.js"></script>
+    
+     <!-- loads templates using handlebars -->
+    <script type="text/javascript" src="/js/handlebars-view/semester.js"></script>
+
+    
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/js/popper.min.js"></script>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="/js/mystyle.js"></script>
+    
+    
+    
+    
+
+
+    
+
+
+
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<h1 style="text-align: center">Add Team Member</h1>
+
+
+{{#if errorMessage}}
+    <div class="alert alert-danger">
+        {{errorMessage}}
+    </div>
+{{/if}}
+
+
+{{#each messages}}
+<div class="alert alert-danger">
+    {{errorMessage}}
+</div>
+{{/each}}
+
+<form action="/admin/team-members/add-member" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="name">Name :</label>
+        <input  name="name" id="name" class="form-control" type="text" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+        <label for="position">Position :</label>
+        <input  name="position" id="position" class="form-control" type="text" placeholder="Enter member's position">
+    </div>
+
+    <div class="form-group">
+        <label for="file">Image :</label>
+        <input type="file" name="file" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label for="fb_link">Facebook Link :</label>
+        <input type="text" name="fb_link" class="form-control" placeholder="Enter a facebook link">
+    </div>
+
+    <div class="form-group">
+        <label for="linkedIn_link">LinkedIn Link :</label>
+        <input type="text" name="linkedIn_link" class="form-control" placeholder="Enter a linkedIn link">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Member</button>
+
+
+</form>

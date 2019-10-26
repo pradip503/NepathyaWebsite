@@ -1,0 +1,39 @@
+<h1 style="text-align: center">Create a event</h1>
+
+
+{{#if errorMessage}}
+    <div class="alert alert-danger">
+        {{errorMessage}}
+    </div>
+{{/if}}
+
+
+{{#each messages}}
+<div class="alert alert-danger">
+    {{errorMessage}}
+</div>
+{{/each}}
+
+<form action="/admin/events/create-event" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label for="title">Event Title :</label>
+        <input  name="title" id="title" class="form-control" type="text" placeholder="Enter event title">
+    </div>
+
+    <div class="form-group">
+        <label for="file">Image :</label>
+        <input type="file" name="file" class="form-control" >
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description :</label>
+        <textarea type="text" name="description" class="form-control" placeholder="Write short description of event"></textarea>
+    </div>
+
+ 
+
+    <button type="submit" class="btn btn-primary">Create Event</button>
+
+
+</form>

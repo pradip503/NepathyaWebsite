@@ -1,0 +1,57 @@
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+        <h1 style="text-align: center"> Add Faculty</h1>
+
+        <form action="/admin/faculties" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="faculty">Faculty Name :</label>
+                <input name="faculty" id="faculty" class="form-control" type="text" placeholder="Enter faculty name"></textarea>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Add Faculty</button>
+
+
+        </form>
+    </div>
+
+
+
+{{!-- -------------------------------------------------------------------------------------------------------- --}}
+    
+    
+    
+    <div class="col-sm-12 col-md-12 col-lg-6"> 
+        <h1 style="text-align: center"> All Faculties</h1>
+
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Faculty</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {{#each faculties}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>
+                        <form action="/admin/faculties/{{id}}?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-danger" >DELETE</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+
+        </table>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-6">
+        <h1 style="text-align: center"> Set Goal</h1>
+
+
+        {{#if errorMessage}}
+            <div class="alert alert-danger">
+                {{errorMessage}}
+            </div>
+        {{/if}}
+
+        {{#if failure_message }}
+        <div class="alert alert-danger">
+        {{failure_message}}
+        </div>
+        {{/if}}
+
+
+        {{#each messages}}
+        <div class="alert alert-danger">
+            {{errorMessage}}
+        </div>
+        {{/each}}
+
+        <form action="/admin/our-goal" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label for="goal">Goal Title :</label>
+                <textarea name="goal" id="goal" class="form-control" type="text" placeholder="Enter goal description"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create Goal</button>
+
+
+        </form>
+    </div>
+
+
+
+{{!-- -------------------------------------------------------------------------------------------------------- --}}
+    
+    
+    
+    <div class="col-sm-12 col-md-12 col-lg-6"> 
+        <h1 style="text-align: center"> View Goal</h1>
+        <h2>All Events.</h2>
+
+        {{#if success_message }}
+        <div class="alert alert-success">
+        {{success_message}}
+        </div>
+        {{/if}}
+
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Our Goal</th>
+                    <th>Operation</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {{#each ourGoal}}
+                <tr>
+                    <td>{{goal}}</td>
+
+                    <td>
+                        <form action="/admin/our-goal/{{id}}?_method=DELETE" method="post">
+                            <button type="submit" class="btn btn-danger" >DELETE</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+
+        </table>
+    </div>
+</div>

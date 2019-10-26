@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="css/semester.css">
+
+
+<h2 class="h2-responsive welcome_heading"> Faculty and Semester</h2>
+
+
+<!-- Grid row -->
+<div class="row">
+
+    
+    {{#each faculties}}
+
+    <!--Grid column-->
+    <div class="col-sm-12 col-md-6">
+
+        <!-- Rotating card -->
+        <div class="card-wrapper">
+            <center>
+            <div id="card-2" class="card text-center">
+
+                <!--Front Side-->
+                <div class="frontface frontface-back-image">
+
+                    <!-- Image-->
+                    <div class="text-white justify-content-center d-flex  align-items-center rgba-black-strong py-auto" style="height: 100%">
+                       <h1 class="card-title pt-2 text-white"><strong>{{name}}</strong></h1>
+                    </div>
+
+                </div>
+                <!--Front Side-->
+
+                <!--Back Side-->
+                <div class="backface">
+
+                   <div class="row pt-4 pb-4 pl-5 pr-5 semester-list-group" >
+                       
+                               {{displaySemesterList semesters}}
+
+                   </div>
+                    
+
+                </div>
+                <!--Back Side-->
+
+            </div>
+            </center>
+        </div>
+        <!-- Rotating card -->
+
+    </div>
+    <!--Grid column-->
+
+
+    {{/each}}
+
+
+</div>
+<!-- Grid row -->
